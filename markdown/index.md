@@ -1,5 +1,5 @@
 ---
-title: 'NutriSense: Automated Hydroponics Dosing System'
+title: 'wIRdle'
 author: '**Vedant Patel and Jonathan Wang** (website template by Ryan Tsang)'
 date: '*EEC172 SQ24*'
 

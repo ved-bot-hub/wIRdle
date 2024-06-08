@@ -1,7 +1,7 @@
 # EEC 172 Project Website Template Repo
 
 > The contents of this example project website are being published with the
-> permission of its authors Kushagra Tiwari and Shengmin Liu.
+> permission of its authors Vedant Patel and Jonathan Wang.
 
 This is an example final project website for UCD EEC172 per the project
 instructions [posted here](https://ucd-eec172.github.io/labs/project.html).
