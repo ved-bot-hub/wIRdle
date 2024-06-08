@@ -10,7 +10,7 @@ Disclaimer: Do note that some requirements in the project instructions may be
 missing from this example, as project instructions may change between course 
 offerings.
 
-It is live [here](https://ucd-eec172.github.io/project-website-example/).
+It is live [here](https://ved-bot-hub.github.io/wIRdle/).
 
 
 ## Usage and Publishing
