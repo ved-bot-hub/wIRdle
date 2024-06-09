@@ -44,7 +44,7 @@ Our source code can be found
 </div>
 
 <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
-  <p style="text-align: center; font-weight: bold;">This is the video where the user guesses the target word in 3 tries and loses the game.</p>
+  <p><strong><em>This is the video where the user guesses the target word in 3 tries and loses the game.</em></strong></p>
 </div>
 
 <div style="text-align:center;margin:auto;max-width:560px">
@@ -54,7 +54,7 @@ Our source code can be found
 </div>
 
 <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
-  <p style="text-align: center; font-weight: bold;">This is the video where the user guesses the target word in 2 tries and wins the game.</p>
+  <p><strong><em>This is the video where the user guesses the target word in 2 tries and wins the game.</em></strong></p>
 </div>
 
 <div style="text-align:center;margin:auto;max-width:560px">
@@ -64,7 +64,7 @@ Our source code can be found
 </div>
 
 <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
-  <p style="text-align: center; font-weight: bold;">This is the video where the user shakes the CC3200 board (Accelerometer) to reset the game.</p>
+  </em></strong></p>This is the video where the user shakes the CC3200 board (Accelerometer) to reset the game.</em></strong></p>
 </div>
 '
 ---
