@@ -24,6 +24,10 @@ Our source code can be found
     <img src="./media/Images/Image002.jpg" style="width:auto;height:2in"/>
     <!-- <span class="caption"> </span> -->
   </div>
+</div>
+
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;padding-top:20px">
   <div style="display: inline-block; vertical-align: bottom;">
     <img src="./media/Images/Image003.jpg" style="width:auto;height:2in" />
     <!-- <span class="caption"> </span> -->
