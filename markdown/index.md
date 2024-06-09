@@ -82,7 +82,7 @@ also makes our portable and enjoyable anywhere.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style='display: inline-block; vertical-align: top;'>
-    <img src="./media/Images/Image003.jpg" style="width:auto;height:200px;"/>
+    <img src="./media/Images/Image005.jpeg" style="width:90%;height:auto;" />
     <span class="caption">
       <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
         <p style="text-align: left; font-weight: bold;">Screenshot of NYT's "Wordle" Web Game</p>
@@ -196,7 +196,8 @@ Remote, BMA222, Adafruit OLED, and AWS blocks.
     the device through AWS IoT and by flashing certificates onto the MCU. After providing
     the necessary permissions on AWS, most of the implementation depended on how we would
     store the game data and message within our code to be sent to AWS.
-
+    <br>
+    <br>
     In the game, there are either win or lose states once the game is over, which means a
     different message will be sent to the user via email upon each of these states. We create
     conditions that check if the game is over and whether it is a loss or win and use strcpy()
