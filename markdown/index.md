@@ -130,7 +130,7 @@ also makes our portable and enjoyable anywhere.
   </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
     <div class="fig">
-      <img src="./media/Image_005.jpg" style="width:90%;height:auto;" />
+      <img src="./media/Images/Image005.jpg" style="width:90%;height:auto;" />
       <span class="caption">System Flowchart</span>
     </div>
   </div>
@@ -167,7 +167,7 @@ also makes our portable and enjoyable anywhere.
   </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
-      <img src="./media/Image004.jpg" style="width:90%;height:auto;" />
+      <img src="./media/Images/Image004.jpg" style="width:90%;height:auto;" />
       <span class="caption">State Diagram</span>
     </div>
   </div>
