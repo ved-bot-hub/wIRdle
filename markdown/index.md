@@ -24,12 +24,8 @@ Our source code can be found
     <img src="./media/Images/Image002.jpg" style="width:auto;height:2in"/>
     <!-- <span class="caption"> </span> -->
   </div>
-</div>
-
-
-<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;padding-top:20px">
   <div style="display: inline-block; vertical-align: bottom;">
-    <img src="./media/Images/Image003.jpg" style="width:auto;height:2in" />
+    <img src="./media/Images/Image005.jpg" style="width:auto;height:2in" />
     <!-- <span class="caption"> </span> -->
   </div>
 </div>
@@ -86,7 +82,7 @@ individual hobbyists to explore hydroponics.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style='display: inline-block; vertical-align: top;'>
-    <img src="./media/Image001.jpg" style="width:auto;height:200"/>
+    <img src="./media/Images/Image001.jpg" style="width:auto;height:200"/>
     <span class="caption">
       <a href="https://www.nytimes.com/games/wordle/index.html">NYT Wordle</a>
       <ul style="text-align:left;">
