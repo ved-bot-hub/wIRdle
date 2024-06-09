@@ -77,7 +77,7 @@ also makes our portable and enjoyable anywhere.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style='display: inline-block; vertical-align: top;'>
-    <img src="./media/Images/Image001.jpg" style="width:200px;height:auto;"/>
+    <img src="./media/Images/Image006.jpg" style="width:200px;height:auto;"/>
     <span class="caption">
       <a href="https://www.nytimes.com/games/wordle/index.html">NYT Wordle</a>
       <ul style="text-align:left;">
