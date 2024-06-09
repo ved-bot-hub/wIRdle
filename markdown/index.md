@@ -77,7 +77,7 @@ also makes our portable and enjoyable anywhere.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style='display: inline-block; vertical-align: top;'>
-    <img src="./media/Images/Image006.jpg" style="width:200px;height:auto;"/>
+    <img src="./media/Images/Image006.jpg" style="width:200px;height:200;"/>
     <span class="caption">
       <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
         <p style="text-align: left; font-weight: bold;">Screenshot of NYT's "Wordle" Web Game</p>
