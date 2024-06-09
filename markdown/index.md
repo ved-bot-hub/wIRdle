@@ -69,16 +69,11 @@ Our source code can be found
 
 # Market Survey
 
-There are two types of similar product on the market. The first one is
-products from AeroGarden. Their products allow users to grow plants in
-nutrient solutions in a limited amount of usually 5 to 10. Compared with
-this product, our product provides an automated system for nutrient
-control that ensures the plant always has the correct amount of
-nutrients needed to avoid excess or insufficient nutrients. The other
-product is an expensive commercial system for horticulture aiming for a
-large scale of growth. Compared with this one, our product has the
-advantage of being cheap and small-scale which is more suitable for
-individual hobbyists to explore hydroponics.
+One similar product out there is the New York Times' "Wordle" game, where
+the user has to guess the target word in 6 guesses. Compared with this
+product, our product provides a non-internet solution to the Wordle where
+the user only needs to connect to a power source to play our game, which
+also makes our portable and enjoyable anywhere.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style='display: inline-block; vertical-align: top;'>
@@ -155,7 +150,7 @@ individual hobbyists to explore hydroponics.
 
 ### CC3200-LAUNCHXL Evaluation Board
 
-All control and logic was handled by two CC3200 microcontroller units,
+All control and logic was handled by a CC3200 microcontroller unit,
 one each for the Master and Slave device. On the master device, it was
 responsible for decoding IR inputs from the remote to allow the user to
 input thresholds to be sent over AWS. The board’s SPI functionality,
@@ -394,160 +389,79 @@ grow.
     <td><p>MCU Evaluation Board</p></td>
     <td><p>2</p></td>
     <td><p>Provided by EEC172 Course</p></td>
-    <td><p>$66.00</p></td>
-    <td><p>$132.00</p></td>
+    <td><p>$55.00</p></td>
+    <td><p>$110.00</p></td>
     <td><p>Control Remote and Local Devices</p></td>
   </tr>
   <tr>
     <td><p>2</p></td>
-    <td><p>Adafruit 1431 OLED</p></td>
-    <td><p>128x128 RGB OLED Display. SPI protocol</p></td>
+    <td><p>BreadBoard</p></td>
+    <td><p>BB400 Solderless Plug-in BreadBoard</p></td>
     <td><p>2</p></td>
     <td><p>Provided by EEC172 Course</p></td>
-    <td><p>$39.95</p></td>
-    <td><p>$79.90</p></td>
-    <td><p>Display PPM, Temperature, Thresholds, Inputs</p></td>
+    <td><p>6.75</p></td>
+    <td><p>$13.5</p></td>
+    <td><p>Develop the circuit for the IR Receiver</p></td>
   </tr>
   <tr>
     <td><p>3</p></td>
-    <td><p>Adafruit 4547 3VDC Pump</p></td>
-    <td><p>Submersible pump. 3V 100mA DC</p></td>
+    <td><p>Adafruit OLED Breakout Board</p></td>
+    <td><p>128x128 RGB OLED Display. SPI protocol</p></td>
     <td><p>2</p></td>
-    <td><p>Adafruit</p></td>
-    <td><p>$2.95</p></td>
-    <td><p>$5.90</p></td>
-    <td><p>For dispensing water and nutrient solution</p></td>
+    <td><p>Provided by EEC172 Course</p></td>
+    <td><p>$38.95</p></td>
+    <td><p>$77.90</p></td>
+    <td><p>Display the game, output, and reset instruction</p></td>
   </tr>
   <tr>
     <td><p>4</p></td>
-    <td><p>Adafruit 4545 6mm Tube</p></td>
-    <td><p>6mm Silicone Tube: 1 meter length</p></td>
+    <td><p>Saleae USB Logic Analyzer Jumper wires</p></td>
+    <td><p>Analyze the input signal</p></td>
     <td><p>1</p></td>
-    <td><p>Adafruit</p></td>
-    <td><p>$1.50</p></td>
-    <td><p>$1.50</p></td>
-    <td><p>For dispensing water and nutrient solution</p></td>
+    <td><p>Provided by EEC172 Course</p></td>
+    <td><p>$109.00</p></td>
+    <td><p>$109.00</p></td>
+    <td><p>Verifying and decoding the input signals coming from IR Remote</p></td>
   </tr>
   <tr>
     <td><p>5</p></td>
-    <td><p>NTC Thermistor 10k</p></td>
-    <td><p>10k ohm nominal resistance, 100cm lead</p></td>
-    <td><p>1</p></td>
-    <td><p>(Already had one, available on Aliexpress)</p></td>
-    <td><p>$0.92</p></td>
-    <td><p>$0.92</p></td>
-    <td><p>For temperature compensation</p></td>
+    <td><p>100 ohm resistor</p></td>
+    <td><p>100 ohm</p></td>
+    <td><p>2</p></td>
+    <td><p>Provided by EEC172 Course</p></td>
+    <td><p>$0.19</p></td>
+    <td><p>$0.38</p></td>
+    <td><p>To build the IR circuit</p></td>
   </tr>
   <tr>
     <td><p>6</p></td>
-    <td><p>Adafruit AD1015 12-bit ADC</p></td>
-    <td><p>12-bit resolution, 4 channels, I2C</p></td>
-    <td><p>1</p></td>
-    <td><p>Adafruit</p></td>
-    <td><p>$9.95</p></td>
-    <td><p>$9.95</p></td>
-    <td><p>To convert Thermistor and TDS sensor reading to digital</p></td>
+    <td><p>100 micro Farad Capacitor</p></td>
+    <td><p>100 micro Farad</p></td>
+    <td><p>2</p></td>
+    <td><p>Provided by EEC172 Course</p></td>
+    <td><p>$0.40</p></td>
+    <td><p>$0.80</p></td>
+    <td><p>To build the IR circuit</p></td>
   </tr>
   <tr>
     <td><p>7</p></td>
-    <td><p>PN2222A Transistor</p></td>
-    <td><p>NPN BJT (40V, 1000mA)</p></td>
+    <td><p>Vishay TSOP31336 IR Receiver</p></td>
+    <td><p>36kHz center frequency</p></td>
     <td><p>2</p></td>
-    <td><p>Digikey (onSemi)</p></td>
-    <td><p>$0.40</p></td>
-    <td><p>$0.80</p></td>
-    <td><p>For digital motor control</p></td>
+    <td><p>Provided by EEC172 Course</p></td>
+    <td><p>$1.36</p></td>
+    <td><p>$2.72</p></td>
+    <td><p>Decodes user inputs</p></td>
   </tr>
   <tr>
     <td><p>8</p></td>
-    <td><p>1N4001 Rectifier Diode</p></td>
-    <td><p>Diffused junction: 50V 1000mA</p></td>
-    <td><p>2</p></td>
-    <td><p>Digikey (Good-Ark Semi)</p></td>
-    <td><p>$0.16</p></td>
-    <td><p>$0.32</p></td>
-    <td><p>Reverse Current Protection</p></td>
-  </tr>
-  <tr>
-    <td><p>9</p></td>
-    <td><p>10k ohm resistor</p></td>
-    <td><p>10k ohm , 1% tolerance, 0.25W</p></td>
-    <td><p>1</p></td>
-    <td><p>Digikey (Stackpole Electronics)</p></td>
-    <td><p>$0.10</p></td>
-    <td><p>$0.10</p></td>
-    <td><p>Voltage divider for Thermistor</p></td>
-  </tr>
-  <tr>
-    <td><p>10</p></td>
-    <td><p>Vishay TSOP31130 IR RCVR</p></td>
-    <td><p>30kHz carrier frequency</p></td>
+    <td><p>AT&T S10-S3 Remotes</p></td>
+    <td><p>General-purpose TV remote. IR RC-5 protocol</p></td>
     <td><p>2</p></td>
     <td><p>Provided by EEC172 Course</p></td>
-    <td><p>$1.41</p></td>
-    <td><p>$2.82</p></td>
-    <td><p>Decode user inputs</p></td>
-  </tr>
-  <tr>
-    <td><p>11</p></td>
-    <td><p>330 ohm resistor</p></td>
-    <td><p>330 ohm resistor, &lt;5% tolerance, 3W</p></td>
-    <td><p>2</p></td>
-    <td><p>Provided by EEC172 Course</p></td>
-    <td><p>$0.59</p></td>
-    <td><p>$1.18</p></td>
-    <td><p>Current Limit for IR Receiv er</p></td>
-  </tr>
-  <tr>
-    <td><p>12</p></td>
-    <td><p>ATT-RC1534801 Remote</p></td>
-    <td><p>General-purpose TV remote. IR NTC protocol</p></td>
-    <td><p>1</p></td>
-    <td><p>Provided by EEC172 Course</p></td>
-    <td><p>$9.99</p></td>
-    <td><p>$9.99</p></td>
-    <td><p>Allow user inputs</p></td>
-  </tr>
-  <tr>
-    <td><p>13</p></td>
-    <td><p>CQRSENTDS01 TDS Sensor</p></td>
-    <td><p>Analog reading 0-2.3V. 0-1000ppm range</p></td>
-    <td><p>1</p></td>
-    <td><p>CQRobot</p></td>
-    <td><p>$7.99</p></td>
-    <td><p>$7.99</p></td>
-    <td><p>Measure TDS of plant solution</p></td>
-  </tr>
-  <tr>
-    <td><p>14</p></td>
-    <td><p>10uF Capacitor</p></td>
-    <td><p>Electrolytic Cap 100V</p></td>
-    <td><p>2</p></td>
-    <td><p>Provided by EEC172 Course</p></td>
-    <td><p>$0.18</p></td>
-    <td><p>$0.36</p></td>
-    <td><p>DC Filtering for IR Receiv er</p></td>
-  </tr>
-  <tr>
-    <td><p>15</p></td>
-    <td><p><u>AA Battery (4ct</u>)</p></td>
-    <td><p>1.5 Volt, Non-rechargable</p></td>
-    <td><p>1</p></td>
-    <td><p>Already had, but</p>
-      <p>available on Amazon</p></td>
-    <td><p>$3.65</p></td>
-    <td><p>$3.65</p></td>
-    <td><p>Provide Power to Motors</p></td>
-  </tr>
-  <tr>
-    <td><p>16</p></td>
-    <td><p>Battery Holder</p></td>
-    <td><p>2xAA (3 Volts Total)</p></td>
-    <td><p>2</p></td>
-    <td><p>Amazon</p></td>
-    <td><p>$2.50</p></td>
-    <td><p>$4.99</p></td>
-    <td><p>Provide Power to Motors</p></td>
+    <td><p>$53.09</p></td>
+    <td><p>$106.18</p></td>
+    <td><p>Allows user inputs</p></td>
   </tr>
   <tr>
     <td colspan="3">
