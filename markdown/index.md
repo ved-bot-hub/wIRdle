@@ -31,23 +31,27 @@ Our source code can be found
 </div>
 
 <h2>Video Demo</h2>
-<div style="text-align:center;margin:auto;max-width:560px">
-  <div style="padding-bottom:56.25%;position:relative;height:0;">
-    <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://www.youtube.com/embed/9JUEmnzx5jg?si=V8NkE1ybSbCIPErO" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-</div>
 
-<div style="text-align:center;margin:auto;max-width:560px">
-  <div style="padding-bottom:56.25%;position:relative;height:0;">
-    <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://www.youtube.com/embed/77GSyI8KiS8?si=F2PwVtREe_c5dvd5" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <!-- First video -->
+  <div style="text-align:center;margin:auto;max-width:560px" class="video-container">
+    <div style="padding-bottom:56.25%;position:relative;height:0;">
+      <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://www.youtube.com/embed/9JUEmnzx5jg?si=V8NkE1ybSbCIPErO" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
   </div>
-</div>
 
-<div style="text-align:center;margin:auto;max-width:560px">
-  <div style="padding-bottom:56.25%;position:relative;height:0;">
-    <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://www.youtube.com/embed/DPbG6lu0HXI?si=VG3mVWWv--RAkCzX" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <!-- Second video -->
+  <div style="text-align:center;margin:auto;max-width:560px" class="video-container">
+    <div style="padding-bottom:56.25%;position:relative;height:0;">
+      <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://www.youtube.com/embed/77GSyI8KiS8?si=F2PwVtREe_c5dvd5" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
   </div>
-</div>
+
+  <!-- Third video -->
+  <div style="text-align:center;margin:auto;max-width:560px" class="video-container">
+    <div style="padding-bottom:56.25%;position:relative;height:0;">
+      <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://www.youtube.com/embed/DPbG6lu0HXI?si=VG3mVWWv--RAkCzX" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
 '
 ---
 
