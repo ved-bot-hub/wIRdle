@@ -21,7 +21,7 @@ Our source code can be found
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;padding-top:20px">
   <div style="display: inline-block; vertical-align: bottom;">
-    <img src="./media/Image_001.jpg" style="width:auto;height:2in"/>
+    <img src="./media/Image002.jpg" style="width:auto;height:2in"/>
     <!-- <span class="caption"> </span> -->
   </div>
   <div style="display: inline-block; vertical-align: bottom;">
@@ -62,7 +62,7 @@ individual hobbyists to explore hydroponics.
       <a href="https://www.nytimes.com/games/wordle/index.html">NYT Wordle</a>
       <ul style="text-align:left;">
       <li>Free</li>
-      <li>Might have to create an account</li>
+      <li>Have to create an account to save your game progress</li>
     </ul>
     </span>
   </div>
