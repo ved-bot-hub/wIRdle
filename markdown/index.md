@@ -27,7 +27,7 @@ Our source code can be found
     </div>
   </div>
   <div style="display: inline-block; text-align: center;">
-    <img src="./media/Images/Image004.jpg" style="width:auto;height:2in"/>
+    <img src="./media/Images/Image002.jpg" style="width:auto;height:2in"/>
     <div class="caption">
       <p><strong><em>Image for when the user loses the game</em></strong></p>
     </div>
