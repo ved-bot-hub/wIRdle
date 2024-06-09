@@ -20,15 +20,20 @@ Our source code can be found
   here (placeholder)</a>.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;padding-top:20px">
-  <div style="display: inline-block; vertical-align: bottom;">
+  <div style="display: inline-block; text-align: center;">
     <img src="./media/Images/Image002.jpg" style="width:auto;height:2in"/>
-    <!-- <span class="caption"> </span> -->
+    <div class="caption">
+      <p><strong><em>Image for when the user wins the game</em></strong></p>
+    </div>
   </div>
-  <div style="display: inline-block; vertical-align: bottom;">
-    <img src="./media/Images/Image005.jpg" style="width:auto;height:2in" />
-    <!-- <span class="caption"> </span> -->
+  <div style="display: inline-block; text-align: center;">
+    <img src="./media/Images/Image005.jpg" style="width:auto;height:2in"/>
+    <div class="caption">
+      <p><strong><em>Image for when the user loses the game</em></strong></p>
+    </div>
   </div>
 </div>
+
 
 <h2>Video Demo</h2>
 <!-- First video -->
@@ -87,7 +92,6 @@ also makes our portable and enjoyable anywhere.
       <ul style="text-align:left;">
       <li>Free</li>
       <li>Have to create an account to save your game progress</li>
-      <li>Credits to </li>
     </ul>
     </span>
   </div>
