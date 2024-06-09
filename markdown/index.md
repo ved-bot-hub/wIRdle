@@ -357,11 +357,15 @@ the results were accurate within 3%, and would not drift by more than
 
 # Future Work
 
-Given more time, we had the idea of developing a web app to allow users
-to control the device from their cell phone. Another idea we wanted to
-implement in the future is adding a grow light and pH controller to
-maintain a more suitable and stable environment for different plants to
-grow.
+Currently our game has no function to recognize if the word that the user
+guesses is a valid word or not. We could try to connect to some external
+dictionary api to find matches and validate it, however the drawbacks of
+this are that there is a lot of overhead when it comes to checking the
+whole dictionary for each word the user guesses. Another potential solution
+would be trying to implement conditions that check for principle word rules
+such as "i before e except after c" to see if the word is valid English.
+More improvements could be keeping track of the time it took to solve the
+wordle to use as personal records. This would use additional timers, etc.
 
 
 # Finalized BOM
@@ -466,19 +470,10 @@ grow.
   <tr>
     <td colspan="3">
       <p>TOTAL PARTS</p></td>
-    <td><p>25</p></td>
+    <td><p>15</p></td>
     <td colspan="2">
       <p>TOTAL</p></td>
-    <td><p>$262.37</p></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td colspan="3">
-      <p>TOTAL PARTS (Excluding Provided)</p></td>
-    <td><p>14</p></td>
-    <td colspan="2">
-      <p>TOTAL (Exluding Provided)</p></td>
-    <td><p>$36.12</p></td>
+    <td><p>$420.48</p></td>
     <td></td>
   </tr>
 </tbody>
