@@ -320,11 +320,11 @@ device, plus the following:
 # Challenges
 
 The most significant challenge we faced while developing this prototype
-was of inaccurate and inconsistent Electrical Conductivity (EC)
-measurements. This occurred due to two reasons: probe channel
-polarization and current limitations of GPIO pins.
+was of the IR Receiver picking up multiple signals. This occurred due to
+the way we had set up our Receiver to receive the signals from the IR Remote
+and how we reset the sysTick count values.
 
-## Probe Channel Polarization
+<!-- ## Probe Channel Polarization
 
 Our first design for the probe was simply two copper rods, which would
 add as electrodes. This probe would be connected in series with a
@@ -334,26 +334,28 @@ allowing us to calculate the EC. However, when we used the probe for a
 few minutes, we realized that the EC value would continue to rise. This
 is because the DC current causes an ionized channel to build up between
 the two electrodes in the water. This cause inconsistent EC readings as
-time goes on.
+time goes on. -->
 
-## Current Limitation of GPIO Pins
+<!-- ## Current Limitation of GPIO Pins
 
 Our next idea was to try using the GPIO pins to power the probe, since
 we can turn it off when not needed, preventing excessive polarization.
 However, the GPIO pins are current limited, and any control circuit with
 a transistor would introduce extra voltage drops. Therefore, the simple
-two-probe implementation was not feasible.
+two-probe implementation was not feasible. -->
 
 ## Solution to Challenges
 
-We realized that using DC current to measure EC was not feasible.
-Therefore, we purchased a standalone EC measurement board from CQRobot.
-This inexpensive solution (\$8) used a low-voltage, low-current AC
-signal to prevent polarization. The board would convert the AC voltage
-drop across the solution to a DC analog voltage, which would then be
-read by our ADC. After calibrating the setup using a commercial TDS pen,
-the results were accurate within 3%, and would not drift by more than
-0.5% over time.
+We realized that waiting until everyone else is done using their remote
+was not a feasible or a viable solution. So, to overcome this issue, we
+started by reducing the time when we reset the sysTick count. Initially,
+we would reset the sysTick count every 150 clock cycles, and by trial and
+error method we got it down to 50 clock cycles, i.e., if the IR Receiver
+detects an input it will reset when the sysTick count reaches 50. Another,
+thing to note here is that in order to minimize the incoming IR signals
+from other remotes nearby, we covered our circuit using a carboard shoe box
+which helped us better implement the sysTick count and reset it every 50
+clock cycles.
 
 # Future Work
 
