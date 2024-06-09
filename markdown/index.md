@@ -1,5 +1,5 @@
 ---
-title: 'wIRdle'
+title: 'WIRDLE'
 author: '**Vedant Patel and Jonathan Wang** (website template by Ryan Tsang)'
 date: '*EEC172 SQ24*'
 
@@ -12,7 +12,7 @@ assignment.<br/>The website source is hosted
 
 toc-title: 'Table of Contents'
 abstract-title: '<h2>Description</h2>'
-abstract: 'wIRdle is an iteration of the popular NYT \"Wordle\" game where the user has 6 tries to guess a target word. Once they input their choice the game notifies them if the characters in that word are exact matches or are positioned incorrectly. Our product is different as we use the IR Remote as the input to control the character input. We also use AWS Email Notification to send a report to the user about their game performance. Apart from that we use Adafruit OLED Breakout Board to display the tries and the game and also we use the BMA222 Accelerometer which is used to reset the game once either the user wins the game or loses it. We differ from this product because our project is not purely web-based, which allows the users to play the core game without requiring an internet connection. Only the AWS Email Notifications are dependent on the internet which is completely optional. Additionally, the best part about our game is that it can be played without internet requiring only a power source for it to run.
+abstract: 'WIRDLE is an iteration of the popular NYT \"Wordle\" game where the user has 6 tries to guess a target word. Once they input their choice the game notifies them if the characters in that word are exact matches or are positioned incorrectly. Our product is different as we use the IR Remote as the input to control the character input. We also use AWS Email Notification to send a report to the user about their game performance. Apart from that we use Adafruit OLED Breakout Board to display the tries and the game and also we use the BMA222 Accelerometer which is used to reset the game once either the user wins the game or loses it. We differ from this product because our project is not purely web-based, which allows the users to play the core game without requiring an internet connection. Only the AWS Email Notifications are dependent on the internet which is completely optional. Additionally, the best part about our game is that it can be played without internet requiring only a power source for it to run.
 <br/><br/>
 Our source code can be found 
 <!-- replace this link -->
@@ -21,13 +21,13 @@ Our source code can be found
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;padding-top:20px">
   <div style="display: inline-block; text-align: center;">
-    <img src="./media/Images/Image002.jpg" style="width:auto;height:2in"/>
+    <img src="./media/Images/Image001.jpg" style="width:auto;height:2in"/>
     <div class="caption">
       <p><strong><em>Image for when the user wins the game</em></strong></p>
     </div>
   </div>
   <div style="display: inline-block; text-align: center;">
-    <img src="./media/Images/Image005.jpg" style="width:auto;height:2in"/>
+    <img src="./media/Images/Image004.jpg" style="width:auto;height:2in"/>
     <div class="caption">
       <p><strong><em>Image for when the user loses the game</em></strong></p>
     </div>
@@ -132,20 +132,30 @@ also makes our portable and enjoyable anywhere.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style="display:inline-block;vertical-align:top;flex:1 0 300px;">
-    Our system works based on the following state diagram. The device will
-    periodically monitor the temperature and the electrical conductivity
-    (EC) of the solution and convert the values into a TDS value using a
-    calibration curve. At the same time, the device will check for threshold
-    inputs, both over the AWS shadow and via manual input on the IR
-    receiver. It will compare the TDS with the lower and upper thresholds
-    set by the user. If the value is within the thresholds, it will stay in
-    the rest state. If the TDS is higher than the upper thresholds, it will
-    go to the water state and activate the water pump until the PPM is lower
-    than the upper thresholds and go back to the rest state. If the PPM is
-    lower than the lower thresholds, it will go to the nutrient state and
-    activate the nutrient pump until the PPM is higher than the lower
-    thresholds and go back to the rest state. In each state, the device will
-    periodically post the TDS.
+    The block diagram found in Figure 3 represents an abstraction of the
+    component relationships that make up our project. Since the CC3200 is the
+    primary MCU of the project, most peripherals will have to interface with it
+    so that we can access the data and perform the necessary processing within
+    the game logic. The BMA222 accelerometer points to the CC3200 because of how
+    we mainly use it to read the accelerometer data through I2C. While we do write
+    to the BMA222, this is only performed to mask the registers we want to ignore
+    in preparation for the reading of the data. Additionally, the IR Remote
+    transmitter is used to send RC-5 formatted sequences to the receiver circuit.
+    The receiver circuit is not represented in the block diagram but can be
+    interpreted as part of the CC3200 block since the receiver output connects to
+    the GPIO pin of the MCU. Upon receiving the input data from both the BMA222 and
+    IR remote, the CC3200 makes this input available through the program, utilizing
+    it within the Game Reset and Game Logic blocks to evaluate and make decisions for
+    the game state. The CC3200 points to the Adafruit OLED because of how the CC3200
+    uses the Adafruit library and TI module functions to initialize and write to the
+    SPI. This similar procedure is represented by the SPI Display function which consists
+    of the various SPI commands used to form the basic game interface. When these display
+    functions are called based on the state of the game logic block, SPI is still utilized
+    to write to the OLED and draw new graphics on the display. Additionally, the game state
+    logic controls the AWS Game Email Notification block which manages the logic of issuing
+    a different message depending if the user has won or not. This process stores the
+    message within a buffer to be sent to the device shadow state which is indexed via AWS
+    and sent over email to the user.
   </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
@@ -174,7 +184,7 @@ thresholds over HTTP from the AWS device shadow, writing the reported
 TDS to the device shadow, and activating the two pumps using the 
 BJT control circuit.
 
-## Functional Blocks: Master
+## Functional Blocks
 
 ### AWS IoT Core
 
@@ -228,100 +238,6 @@ BJT control circuit.
     <div class="fig">
       <img src="./media/Image_009.jpg" style="width:auto;height:2in" />
       <span class="caption">IR Receiver Wiring Diagram</span>
-    </div>
-  </div>
-</div>
-
-## Functional Blocks: Slave
-
-The slave device contains all the functional blocks from the master
-device, plus the following:
-
-### Analog-To-Digital Converter (ADC) Board
-
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-    The outputs from the thermistor and TDS sensor board are
-    in the form of analog voltages, which need to be converted to digital
-    values to be usable in our program. We chose the AD1015 breakout board
-    from Adafruit, which sports 4-channels and 12 bits of precision. We
-    ended up using only 2 channels, so there is a potential for even more
-    cost savings. The ADC board supports I2C communication, which we can use
-    to request and read the two channel voltages. 
-    The <a href="https://cdn-shop.adafruit.com/datasheets/ads1015.pdf">
-    product datasheet</a> contains the necessary configuration values
-    and register addresses for operation.
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-    <div class="fig">
-      <img src="./media/Image_010.jpg" style="width:auto;height:2in" />
-      <span class="caption">ADC Wiring Diagram</span>
-    </div>
-  </div>
-</div>
-
-### Thermistor
-
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 300px;'>
-    Conductivity-based TDS measurements are sensitive to temperature. To
-    allow accurate TDS measurements in a variety of climates and seasons,
-    temperature compensation calculations must be performed. To measure the
-    temperature, we use an NTC thermistor connected in a voltage divider
-    with a 10k resistor. The voltage across the resistor is read by the ADC
-    and converted to temperature using the equation provided by the
-    thermistor datasheet.
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-    <div class="fig">
-      <img src="./media/Image_011.jpg" style="width:auto;height:2in" />
-      <span class="caption">Thermistor Circuit Diagram</span>
-    </div>
-  </div>
-</div>
-
-### TDS Sensor Board
-
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 500px'>
-    In our first attempt to measure TDS, we used a simple two-probe analog
-    setup with a voltage divider. We soon found out that this was a naïve
-    approach (see Challenges). Consequently, we acquired a specialty TDS
-    sensing board from CQRobot, which generates a sinusoidal pulse and
-    measures the voltage drop to give a highly precise voltage to the ADC.
-    The MCU can then convert this voltage to a TDS value using the equation
-    provided by the device datasheet. We calibrated the TDS readings using a
-    standalone TDS sensor pen. After calibration and setting up the curves
-    for temperature compensation, we were able to achieve TDS readings
-    accurate to within 5% of the TDS sensor pen.
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:1 0 600px'>
-    <div class="fig">
-      <img src="./media/Image_012.jpg" style="width:auto;height:2in;padding-top:30px" />
-      <span class="caption">TDS Sensor Wiring Diagram</span>
-    </div>
-  </div>
-</div>
-
-### Pumps and Control Circuit
-
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 500px'>
-    The CC3200 is unable to provide sufficient power to drive the pumps,
-    which need 100mA of current each. Therefore, we used an external power
-    source in the form of 2 AA batteries for each pump motor. To allow the
-    CC3200 to turn on/off the motors, we designed a simple amplifier using a
-    Common Emitter topology. When the control pin is asserted HIGH, the BJT
-    will allow current to flow from 3V to ground through the pump motor.
-    Conversely, if the control signal is LOW, the BJT will not allow current
-    to flow in the motor. For each motor, there is a reverse-biased diode
-    connected across it. This protects our circuit from current generated by
-    the motor if it is spun from external force or inertia.
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:1 0 600px'>
-    <div class="fig">
-      <img src="./media/Image_013.jpg" style="width:auto;height:2in;padding-top:30px" />
-      <span class="caption">Pump Circuit Diagrams</span>
     </div>
   </div>
 </div>

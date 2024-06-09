@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Vedant Patel and Jonathan Wang (website template by Ryan Tsang)" />
-  <title>wIRdle</title>
+  <title>WIRDLE</title>
   <!-- <link rel="stylesheet" type="text/css" href="assets/github-markdown-light.css" /> -->
   <link rel="stylesheet" href="assets/github-markdown-light.css" />
   <link rel="stylesheet" href="assets/style-customization.css" />
@@ -15,14 +15,14 @@
 </head>
 <article class="markdown-body">
 <header id="title-block-header">
-<h1 class="title">wIRdle</h1>
+<h1 class="title">WIRDLE</h1>
 <p class="subtitle"><blockquote><b>EEC172 Final Project Webpage Example</b><br/> Note to current students: this is an <i>example</i> webpage and may not fulfill all stated requirements of the current quarter's assignment.<br/>The website source is hosted <a href="https://github.com/ved-bot-hub/wIRdle">on github</a>. </blockquote></p>
 <p class="author"><strong>Vedant Patel and Jonathan Wang</strong>
 (website template by Ryan Tsang)</p>
 <p class="date"><em>EEC172 SQ24</em></p>
 <div class="abstract">
 <div class="abstract-title"><h2>Description</h2></div>
-wIRdle is an iteration of the popular NYT "Wordle" game where the user
+WIRDLE is an iteration of the popular NYT "Wordle" game where the user
 has 6 tries to guess a target word. Once they input their choice the
 game notifies them if the characters in that word are exact matches or
 are positioned incorrectly. Our product is different as we use the IR
@@ -40,7 +40,7 @@ requiring only a power source for it to run. <br/><br/> Our source code
 can be found <!-- replace this link -->
 <a href="https://github.com/ved-bot-hub/wIRdle"> here
 (placeholder)</a>.<br />
-<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;padding-top:20px"> <div style="display: inline-block; text-align: center;"> <img src="./media/Images/Image002.jpg" style="width:auto;height:2in"/> <div class="caption"> <p><strong><em>Image for when the user wins the game</em></strong></p> </div> </div> <div style="display: inline-block; text-align: center;"> <img src="./media/Images/Image005.jpg" style="width:auto;height:2in"/> <div class="caption"> <p><strong><em>Image for when the user loses the game</em></strong></p> </div> </div> </div>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;padding-top:20px"> <div style="display: inline-block; text-align: center;"> <img src="./media/Images/Image001.jpg" style="width:auto;height:2in"/> <div class="caption"> <p><strong><em>Image for when the user wins the game</em></strong></p> </div> </div> <div style="display: inline-block; text-align: center;"> <img src="./media/Images/Image004.jpg" style="width:auto;height:2in"/> <div class="caption"> <p><strong><em>Image for when the user loses the game</em></strong></p> </div> </div> </div>
 <br />
 <h2>Video Demo</h2> <!-- First video --> <div style="text-align:center;margin:auto;max-width:560px"> <div style="padding-bottom:56.25%;position:relative;height:0;"> <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://www.youtube.com/embed/9JUEmnzx5jg?si=V8NkE1ybSbCIPErO" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div> </div>
 <div style="margin-bottom: 20px;"> <!-- Add some margin here --> <p style="text-align: center; font-weight: bold;">This is the video where the user guesses the target word in 3 tries and loses the game.</p> </div>
@@ -67,24 +67,12 @@ id="toc-functional-specification">Functional Specification</a></li>
 <li><a href="#cc3200-launchxl-evaluation-board"
 id="toc-cc3200-launchxl-evaluation-board">CC3200-LAUNCHXL Evaluation
 Board</a></li>
-<li><a href="#functional-blocks-master"
-id="toc-functional-blocks-master">Functional Blocks: Master</a>
+<li><a href="#functional-blocks" id="toc-functional-blocks">Functional
+Blocks</a>
 <ul>
 <li><a href="#aws-iot-core" id="toc-aws-iot-core">AWS IoT Core</a></li>
 <li><a href="#oled-display" id="toc-oled-display">OLED Display</a></li>
 <li><a href="#ir-receiver" id="toc-ir-receiver">IR Receiver</a></li>
-</ul></li>
-<li><a href="#functional-blocks-slave"
-id="toc-functional-blocks-slave">Functional Blocks: Slave</a>
-<ul>
-<li><a href="#analog-to-digital-converter-adc-board"
-id="toc-analog-to-digital-converter-adc-board">Analog-To-Digital
-Converter (ADC) Board</a></li>
-<li><a href="#thermistor" id="toc-thermistor">Thermistor</a></li>
-<li><a href="#tds-sensor-board" id="toc-tds-sensor-board">TDS Sensor
-Board</a></li>
-<li><a href="#pumps-and-control-circuit"
-id="toc-pumps-and-control-circuit">Pumps and Control Circuit</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#challenges" id="toc-challenges">Challenges</a>
@@ -156,20 +144,30 @@ which also makes our portable and enjoyable anywhere.</p>
 <h2 id="functional-specification">Functional Specification</h2>
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style="display:inline-block;vertical-align:top;flex:1 0 300px;">
-    Our system works based on the following state diagram. The device will
-    periodically monitor the temperature and the electrical conductivity
-    (EC) of the solution and convert the values into a TDS value using a
-    calibration curve. At the same time, the device will check for threshold
-    inputs, both over the AWS shadow and via manual input on the IR
-    receiver. It will compare the TDS with the lower and upper thresholds
-    set by the user. If the value is within the thresholds, it will stay in
-    the rest state. If the TDS is higher than the upper thresholds, it will
-    go to the water state and activate the water pump until the PPM is lower
-    than the upper thresholds and go back to the rest state. If the PPM is
-    lower than the lower thresholds, it will go to the nutrient state and
-    activate the nutrient pump until the PPM is higher than the lower
-    thresholds and go back to the rest state. In each state, the device will
-    periodically post the TDS.
+    The block diagram found in Figure 3 represents an abstraction of the
+    component relationships that make up our project. Since the CC3200 is the
+    primary MCU of the project, most peripherals will have to interface with it
+    so that we can access the data and perform the necessary processing within
+    the game logic. The BMA222 accelerometer points to the CC3200 because of how
+    we mainly use it to read the accelerometer data through I2C. While we do write
+    to the BMA222, this is only performed to mask the registers we want to ignore
+    in preparation for the reading of the data. Additionally, the IR Remote
+    transmitter is used to send RC-5 formatted sequences to the receiver circuit.
+    The receiver circuit is not represented in the block diagram but can be
+    interpreted as part of the CC3200 block since the receiver output connects to
+    the GPIO pin of the MCU. Upon receiving the input data from both the BMA222 and
+    IR remote, the CC3200 makes this input available through the program, utilizing
+    it within the Game Reset and Game Logic blocks to evaluate and make decisions for
+    the game state. The CC3200 points to the Adafruit OLED because of how the CC3200
+    uses the Adafruit library and TI module functions to initialize and write to the
+    SPI. This similar procedure is represented by the SPI Display function which consists
+    of the various SPI commands used to form the basic game interface. When these display
+    functions are called based on the state of the game logic block, SPI is still utilized
+    to write to the OLED and draw new graphics on the display. Additionally, the game state
+    logic controls the AWS Game Email Notification block which manages the logic of issuing
+    a different message depending if the user has won or not. This process stores the
+    message within a buffer to be sent to the device shadow state which is indexed via AWS
+    and sent over email to the user.
   </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
@@ -195,7 +193,7 @@ This includes interfacing with the ADC over the I2C bus, reading
 thresholds over HTTP from the AWS device shadow, writing the reported
 TDS to the device shadow, and activating the two pumps using the BJT
 control circuit.</p>
-<h2 id="functional-blocks-master">Functional Blocks: Master</h2>
+<h2 id="functional-blocks">Functional Blocks</h2>
 <h3 id="aws-iot-core">AWS IoT Core</h3>
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
   <div style='display: inline-block; vertical-align: top;flex:1 0 200px'>
@@ -245,95 +243,6 @@ control circuit.</p>
     <div class="fig">
       <img src="./media/Image_009.jpg" style="width:auto;height:2in" />
       <span class="caption">IR Receiver Wiring Diagram</span>
-    </div>
-  </div>
-</div>
-
-<h2 id="functional-blocks-slave">Functional Blocks: Slave</h2>
-<p>The slave device contains all the functional blocks from the master
-device, plus the following:</p>
-<h3 id="analog-to-digital-converter-adc-board">Analog-To-Digital
-Converter (ADC) Board</h3>
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-    The outputs from the thermistor and TDS sensor board are
-    in the form of analog voltages, which need to be converted to digital
-    values to be usable in our program. We chose the AD1015 breakout board
-    from Adafruit, which sports 4-channels and 12 bits of precision. We
-    ended up using only 2 channels, so there is a potential for even more
-    cost savings. The ADC board supports I2C communication, which we can use
-    to request and read the two channel voltages. 
-    The <a href="https://cdn-shop.adafruit.com/datasheets/ads1015.pdf">
-    product datasheet</a> contains the necessary configuration values
-    and register addresses for operation.
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-    <div class="fig">
-      <img src="./media/Image_010.jpg" style="width:auto;height:2in" />
-      <span class="caption">ADC Wiring Diagram</span>
-    </div>
-  </div>
-</div>
-
-<h3 id="thermistor">Thermistor</h3>
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 300px;'>
-    Conductivity-based TDS measurements are sensitive to temperature. To
-    allow accurate TDS measurements in a variety of climates and seasons,
-    temperature compensation calculations must be performed. To measure the
-    temperature, we use an NTC thermistor connected in a voltage divider
-    with a 10k resistor. The voltage across the resistor is read by the ADC
-    and converted to temperature using the equation provided by the
-    thermistor datasheet.
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:1 0 400px'>
-    <div class="fig">
-      <img src="./media/Image_011.jpg" style="width:auto;height:2in" />
-      <span class="caption">Thermistor Circuit Diagram</span>
-    </div>
-  </div>
-</div>
-
-<h3 id="tds-sensor-board">TDS Sensor Board</h3>
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 500px'>
-    In our first attempt to measure TDS, we used a simple two-probe analog
-    setup with a voltage divider. We soon found out that this was a naïve
-    approach (see Challenges). Consequently, we acquired a specialty TDS
-    sensing board from CQRobot, which generates a sinusoidal pulse and
-    measures the voltage drop to give a highly precise voltage to the ADC.
-    The MCU can then convert this voltage to a TDS value using the equation
-    provided by the device datasheet. We calibrated the TDS readings using a
-    standalone TDS sensor pen. After calibration and setting up the curves
-    for temperature compensation, we were able to achieve TDS readings
-    accurate to within 5% of the TDS sensor pen.
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:1 0 600px'>
-    <div class="fig">
-      <img src="./media/Image_012.jpg" style="width:auto;height:2in;padding-top:30px" />
-      <span class="caption">TDS Sensor Wiring Diagram</span>
-    </div>
-  </div>
-</div>
-
-<h3 id="pumps-and-control-circuit">Pumps and Control Circuit</h3>
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;">
-  <div style='display: inline-block; vertical-align: top;flex:1 0 500px'>
-    The CC3200 is unable to provide sufficient power to drive the pumps,
-    which need 100mA of current each. Therefore, we used an external power
-    source in the form of 2 AA batteries for each pump motor. To allow the
-    CC3200 to turn on/off the motors, we designed a simple amplifier using a
-    Common Emitter topology. When the control pin is asserted HIGH, the BJT
-    will allow current to flow from 3V to ground through the pump motor.
-    Conversely, if the control signal is LOW, the BJT will not allow current
-    to flow in the motor. For each motor, there is a reverse-biased diode
-    connected across it. This protects our circuit from current generated by
-    the motor if it is spun from external force or inertia.
-  </div>
-  <div style='display: inline-block; vertical-align: top;flex:1 0 600px'>
-    <div class="fig">
-      <img src="./media/Image_013.jpg" style="width:auto;height:2in;padding-top:30px" />
-      <span class="caption">Pump Circuit Diagrams</span>
     </div>
   </div>
 </div>
