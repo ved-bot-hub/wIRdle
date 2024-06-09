@@ -38,17 +38,27 @@ Our source code can be found
   </div>
 </div>
 
+<!-- Text after the first video -->
+<p>This is the video where the user uses up all the 3 tries and loses the game.</p>
+
 <div style="text-align:center;margin:auto;max-width:560px">
   <div style="padding-bottom:56.25%;position:relative;height:0;">
     <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://www.youtube.com/embed/77GSyI8KiS8?si=F2PwVtREe_c5dvd5" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
 
+<!-- Text after the second video -->
+<p>This is the video where the user guesses the target word in 2 tries.</p>
+
 <div style="text-align:center;margin:auto;max-width:560px">
   <div style="padding-bottom:56.25%;position:relative;height:0;">
     <iframe style="left:0;top:0;width:100%;height:100%;position:absolute;" width="560" height="315" src="https://www.youtube.com/embed/DPbG6lu0HXI?si=VG3mVWWv--RAkCzX" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
+
+<!-- Text after the third video -->
+<p>This is the video where the user shakes the CC3200 board to reset the game.</p>
+
 '
 ---
 
