@@ -57,7 +57,7 @@ individual hobbyists to explore hydroponics.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style='display: inline-block; vertical-align: top;'>
-    <img src="./media/Image_003.jpg" style="width:auto;height:200"/>
+    <img src="./media/Image001.jpg" style="width:auto;height:200"/>
     <span class="caption">
       <a href="https://www.nytimes.com/games/wordle/index.html">NYT Wordle</a>
       <ul style="text-align:left;">
