@@ -82,7 +82,7 @@ also makes our portable and enjoyable anywhere.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style='display: inline-block; vertical-align: top;'>
-    <img src="./media/Images/Image006.jpg" style="width:300px;height:auto;"/>
+    <img src="./media/Images/Image003.jpg" style="width:300px;height:auto;"/>
     <span class="caption">
       <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
         <p style="text-align: left; font-weight: bold;">Screenshot of NYT's "Wordle" Web Game</p>
@@ -103,36 +103,7 @@ also makes our portable and enjoyable anywhere.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style="display:inline-block;vertical-align:top;flex:1 0 400px;">
-    As shown in the system flowchart, we use one of the CC3200 boards for
-    the closed feedback loop for maintaining concentration in the
-    environment. The board will read values with I2C protocol through an ADC
-    which reads values from the thermistor and the TDS meter sensor. The
-    board will also periodically read user-defined thresholds from the AWS
-    cloud using RESTful APIs. When the sensory values read outside of the
-    user-defined thresholds, the board will activate the motor control
-    function to pump either water or nutrient solution to bring the
-    concentration back within the thresholds. Meanwhile, another CC3200
-    board is frequently reading from the AWS cloud to present the current
-    TDS reading and user-defined threshold to the user on an OLED through
-    SPI protocols. To adjust the thresholds, the user can either do it
-    remotely or locally by using a TV remote to type the number into the IR
-    receiver. The adjustments will be updated to the AWS and if the user
-    updates remotely, the local CC3200 board will update the values in the
-    next synchronization.
-  </div>
-  <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
-    <div class="fig">
-      <img src="./media/Image_005.jpg" style="width:90%;height:auto;" />
-      <span class="caption">System Flowchart</span>
-    </div>
-  </div>
-</div>
-
-## Functional Specification
-
-<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
-  <div style="display:inline-block;vertical-align:top;flex:1 0 300px;">
-    The block diagram found in Figure 3 represents an abstraction of the
+    The block diagram found in the right represents an abstraction of the
     component relationships that make up our project. Since the CC3200 is the
     primary MCU of the project, most peripherals will have to interface with it
     so that we can access the data and perform the necessary processing within
@@ -157,9 +128,46 @@ also makes our portable and enjoyable anywhere.
     message within a buffer to be sent to the device shadow state which is indexed via AWS
     and sent over email to the user.
   </div>
+  <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
+    <div class="fig">
+      <img src="./media/Image_005.jpg" style="width:90%;height:auto;" />
+      <span class="caption">System Flowchart</span>
+    </div>
+  </div>
+</div>
+
+## Functional Specification
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
+  <div style="display:inline-block;vertical-align:top;flex:1 0 300px;">
+    According to the flowchart in the figure to the right, the basic game logic functionality
+    is described. Upon game initialization, various actions are performed. First, all of
+    the peripheral dependencies and protocols are initialized, including SPI and I2C. In
+    addition, GPIO and Systick are initialized to prepare for the interrupt handling upon
+    each RC-5 sequence received. The game screen has to be drawn onto the Adafruit OLED
+    through SPI and a new word is chosen to be the target for the game. Many of the processes
+    lie within the IR functionality where if a 13-bit pulse sequence is detected, the GPIO
+    handler will decode each pulse and measure the pulse times. A pulse can only successfully
+    be decoded as a 0 bit if the pulse is within 600-680 µs, whereas a 1 bit is decoded with
+    a window of 1000-2500 µs. If invalid data is interpreted within a sequence, the sequence
+    should be reset so that the handler can detect additional sequences. Upon a successful
+    sequence read, our program takes the 13-bit buffer and translates it into decimal which
+    is used to assign a specifically unique character code. This character code is used for
+    evaluation to determine what the user has inputted. For our IR remote, the MUTE key is
+    used for deletion while the “1” key represents submission, any other input is used for
+    character input. Depending on which scenario, the game issues the color-coded hints by
+    drawing rectangles in the game screen grid. After every submission of a 5-letter word,
+    game variables such as gameOver and gameWon are evaluated to check when to send the AWS
+    post request so that an email notification may be received. The type of message is
+    evaluated based on if the user won or lost, and this takes place after checking if the
+    game is over at all. This whole process runs in parallel with our write/reads to the
+    BMA222 to take the necessary orientation data. By maintaining storage of the BMA222 data
+    across 50 iterations of the main function while looping, we can compare the front and end
+    of this buffer to observe actual changes in value when the orientation of the device is altered.
+  </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 500px">
     <div class="fig">
-      <img src="./media/Image_006.jpg" style="width:90%;height:auto;" />
+      <img src="./media/Image004.jpg" style="width:90%;height:auto;" />
       <span class="caption">State Diagram</span>
     </div>
   </div>
