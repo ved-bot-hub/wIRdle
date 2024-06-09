@@ -82,7 +82,7 @@ also makes our portable and enjoyable anywhere.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style='display: inline-block; vertical-align: top;'>
-    <img src="./media/Images/Image003.jpg" style="width:300px;height:auto;"/>
+    <img src="./media/Images/Image003.jpg" style="width:auto;height:auto;"/>
     <span class="caption">
       <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
         <p style="text-align: left; font-weight: bold;">Screenshot of NYT's "Wordle" Web Game</p>
@@ -130,7 +130,7 @@ also makes our portable and enjoyable anywhere.
   </div>
   <div style="display:inline-block;vertical-align:top;flex:0 0 400px;">
     <div class="fig">
-      <img src="./media/Images/Image005.jpg" style="width:90%;height:auto;" />
+      <img src="./media/Images/Image005.jpeg" style="width:90%;height:auto;" />
       <span class="caption">System Flowchart</span>
     </div>
   </div>
