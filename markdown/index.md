@@ -39,7 +39,7 @@ Our source code can be found
 </div>
 
 <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
-  <p style="text-align: center; font-weight: bold;">This is the video where the user uses up all the 3 tries and loses the game.</p>
+  <p style="text-align: center; font-weight: bold;">This is the video where the user guesses the target word in 3 tries and loses the game.</p>
 </div>
 
 <div style="text-align:center;margin:auto;max-width:560px">
