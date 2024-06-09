@@ -39,7 +39,7 @@ Our source code can be found
 </div>
 
 <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
-  <p>This is the video where the user uses up all the 3 tries and loses the game.</p>
+  <p style="text-align: center;">This is the video where the user uses up all the 3 tries and loses the game.</p>
 </div>
 
 <div style="text-align:center;margin:auto;max-width:560px">
@@ -49,7 +49,7 @@ Our source code can be found
 </div>
 
 <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
-  <p>This is the video where the user guesses the target word in 2 tries.</p>
+  <p style="text-align: center;">This is the video where the user guesses the target word in 2 tries.</p>
 </div>
 
 <div style="text-align:center;margin:auto;max-width:560px">
@@ -59,7 +59,7 @@ Our source code can be found
 </div>
 
 <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
-  <p>This is the video where the user shakes the CC3200 board to reset the game.</p>
+  <p style="text-align: center;">This is the video where the user shakes the CC3200 board to reset the game.</p>
 </div>
 '
 ---
