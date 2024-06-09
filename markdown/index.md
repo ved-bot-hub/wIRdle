@@ -359,15 +359,28 @@ clock cycles.
 
 # Future Work
 
-Currently our game has no function to recognize if the word that the user
-guesses is a valid word or not. We could try to connect to some external
-dictionary api to find matches and validate it, however the drawbacks of
-this are that there is a lot of overhead when it comes to checking the
-whole dictionary for each word the user guesses. Another potential solution
-would be trying to implement conditions that check for principle word rules
-such as "i before e except after c" to see if the word is valid English.
-More improvements could be keeping track of the time it took to solve the
-wordle to use as personal records. This would use additional timers, etc.
+While we were able to complete many of our target goals, there is still much 
+work to be done in terms of potential improvement and add-ons to this prototype
+of the game. When compared to other existing market solutions such as NYT’s
+“Wordle”, one important feature that isn’t present in our iteration is word
+validation. In the web game, users are prevented from entering 5-letter words
+that aren’t valid English words. In our case, users can enter sequences of
+characters even if they do not make much sense in terms of meaning. Potential
+improvements could include connecting to an external dictionary API in which
+every time the user submits a guess, the word is indexed through the dictionary
+to find a match. If not, the word would be rejected and the player would have to
+retry their attempt. The drawbacks of this solution are how performing this type
+of indexing for every user attempt can utilize a large amount of overhead,
+especially when the program would have to make several API requests per game.
+Other implementations to this issue include possibly checking the user guess with
+common word rules from the English language such as “i before e except after c”.
+This method would be much more optimal in terms of complexity. Other improvements
+include keeping track of other types of meaningful data to report to the user upon
+a victory or loss. Possible solutions are the utilization of other timers within
+the TI module to keep track of the duration of each game. Upon each victory, the
+user can be notified of personal records in regard to the time it took for them to
+guess the target word. This would imply keeping track of a persistent buffer to
+store past time records of previous games.
 
 
 # Finalized BOM
