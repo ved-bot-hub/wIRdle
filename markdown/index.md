@@ -216,6 +216,7 @@ Remote, BMA222, Adafruit OLED, and AWS blocks.
     inputs (1-9, delete and enter). The IR receiver is connected to VCC
     through a resistor and a capacitor to filter any ripples.
   </div>
+</div>
 
 # Challenges
 
