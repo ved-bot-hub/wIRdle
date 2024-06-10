@@ -80,9 +80,9 @@ product, our product provides a non-internet solution to the Wordle where
 the user only needs to connect to a power source to play our game, which
 also makes our portable and enjoyable anywhere.
 
-<img src="./media/Images/Image003.jpg" style="width:90%;height:auto;" />
-<div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
+<!-- <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
   <div style='display: inline-block; vertical-align: top;'>
+    <img src="./media/Images/Image003.jpg" style="width:90%;height:auto;" />
     <span class="caption">
       <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
         <p style="text-align: left; font-weight: bold;">Screenshot of NYT's "Wordle" Web Game</p>
@@ -93,9 +93,9 @@ also makes our portable and enjoyable anywhere.
       <li>Free</li>
       <li>Have to create an account to save your game progress</li>
     </ul>
-    </span>
-  </div>
-</div>
+    </span> -->
+  <!-- </div> -->
+<!-- </div> -->
 
 # Design
 
