@@ -90,12 +90,13 @@ also makes our portable and enjoyable anywhere.
       </div>
       <a href="https://www.nytimes.com/games/wordle/index.html">NYT Wordle</a>
       <ul style="text-align:left;">
-      <li>Free</li>
-      <li>Have to create an account to save your game progress</li>
-    </ul>
+        <li>Free</li>
+        <li>Have to create an account to save your game progress</li>
+      </ul>
     </span>
   </div>
 </div>
+
 
 # Design
 
