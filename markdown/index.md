@@ -7,10 +7,6 @@ toc-title: 'Table of Contents'
 abstract-title: '<h2>Description</h2>'
 abstract: 'WIRDLE is an iteration of the popular NYT \"Wordle\" game where the user has 6 tries to guess a target word. Once they input their choice the game notifies them if the characters in that word are exact matches or are positioned incorrectly. Our product is different as we use the IR Remote as the input to control the character input. We also use AWS Email Notification to send a report to the user about their game performance. Apart from that we use Adafruit OLED Breakout Board to display the tries and the game and also we use the BMA222 Accelerometer which is used to reset the game once either the user wins the game or loses it. We differ from this product because our project is not purely web-based, which allows the users to play the core game without requiring an internet connection. Only the AWS Email Notifications are dependent on the internet which is completely optional. Additionally, the best part about our game is that it can be played without internet requiring only a power source for it to run.
 <br/><br/>
-Our source code can be found 
-<!-- replace this link -->
-<a href="https://github.com/ved-bot-hub/wIRdle">
-  here (placeholder)</a>.
 
 <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;padding-top:20px">
   <div style="display: inline-block; text-align: center;">
