@@ -84,7 +84,7 @@ also makes our portable and enjoyable anywhere.
   <div style='display: inline-block; vertical-align: top;'>
     <img src="./media/Images/Image003.jpg" style="width:90%;height:auto;" />
     <span class="caption">
-      <div style="margin-bottom: 20px;"> <!-- Add some margin here -->
+      <div style="margin-bottom: 20px;">
         <p style="text-align: left; font-weight: bold;">Screenshot of NYT's "Wordle" Web Game</p>
         <p style="text-align: left; font-weight: bold;">Image Credit to Jackie Frere/NYT</p>
       </div>
@@ -93,9 +93,9 @@ also makes our portable and enjoyable anywhere.
       <li>Free</li>
       <li>Have to create an account to save your game progress</li>
     </ul>
-    </span> -->
-  <!-- </div> -->
-<!-- </div> -->
+    </span>
+  </div>
+</div> -->
 
 # Design
 
