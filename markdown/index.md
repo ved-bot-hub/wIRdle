@@ -80,23 +80,6 @@ product, our product provides a non-internet solution to the Wordle where
 the user only needs to connect to a power source to play our game, which
 also makes our portable and enjoyable anywhere.
 
-<!-- <div style="display:flex;flex-wrap:wrap;justify-content:space-evenly;">
-  <div style='display: inline-block; vertical-align: top;'>
-    <img src="./media/Images/Image003.jpg" style="width:90%;height:auto;" />
-    <span class="caption">
-      <div style="margin-bottom: 20px;">
-        <p style="text-align: left; font-weight: bold;">Screenshot of NYT's "Wordle" Web Game</p>
-        <p style="text-align: left; font-weight: bold;">Image Credit to Jackie Frere/NYT</p>
-      </div>
-      <a href="https://www.nytimes.com/games/wordle/index.html">NYT Wordle</a>
-      <ul style="text-align:left;">
-      <li>Free</li>
-      <li>Have to create an account to save your game progress</li>
-    </ul>
-    </span>
-  </div>
-</div> -->
-
 # Design
 
 ## System Architecture
@@ -205,12 +188,6 @@ Remote, BMA222, Adafruit OLED, and AWS blocks.
     change in device shadow state by indexing into the state JSON and sending our message data
     to the user’s email.
   </div>
-  <!-- <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
-    <div class="fig">
-      <img src="./media/Image_007.jpg" style="width:auto;height:2.5in" />
-      <span class="caption">Device Shadow JSON</span>
-    </div>
-  </div> -->
 </div>
 
 ### OLED Display
@@ -224,12 +201,6 @@ Remote, BMA222, Adafruit OLED, and AWS blocks.
     placed in the correct position, weere in the wrong position, or if the character was
     not there in the word, where the boxes would turn Green, Yellow, and Red respectively.
   </div>
-  <!-- <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
-    <div class="fig">
-      <img src="./media/Image_008.jpg" style="width:auto;height:2in" />
-      <span class="caption">OLED Wiring Diagram</span>
-    </div>
-  </div> -->
 </div>
 
 ### IR Receiver
@@ -245,13 +216,6 @@ Remote, BMA222, Adafruit OLED, and AWS blocks.
     inputs (1-9, delete and enter). The IR receiver is connected to VCC
     through a resistor and a capacitor to filter any ripples.
   </div>
-  <div style='display: inline-block; vertical-align: top;flex:0 0 400px'>
-    <div class="fig">
-      <img src="./media/Image_009.jpg" style="width:auto;height:2in" />
-      <span class="caption">IR Receiver Wiring Diagram</span>
-    </div>
-  </div>
-</div>
 
 # Challenges
 
@@ -259,26 +223,6 @@ The most significant challenge we faced while developing this prototype
 was of the IR Receiver picking up multiple signals. This occurred due to
 the way we had set up our Receiver to receive the signals from the IR Remote
 and how we reset the sysTick count values.
-
-<!-- ## Probe Channel Polarization
-
-Our first design for the probe was simply two copper rods, which would
-add as electrodes. This probe would be connected in series with a
-1000-ohm resistor to act as a voltage divider. We would simply connect
-the probe to VCC and measure the voltage divider through the ADC,
-allowing us to calculate the EC. However, when we used the probe for a
-few minutes, we realized that the EC value would continue to rise. This
-is because the DC current causes an ionized channel to build up between
-the two electrodes in the water. This cause inconsistent EC readings as
-time goes on. -->
-
-<!-- ## Current Limitation of GPIO Pins
-
-Our next idea was to try using the GPIO pins to power the probe, since
-we can turn it off when not needed, preventing excessive polarization.
-However, the GPIO pins are current limited, and any control circuit with
-a transistor would introduce extra voltage drops. Therefore, the simple
-two-probe implementation was not feasible. -->
 
 ## Solution to Challenges
 
