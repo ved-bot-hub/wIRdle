@@ -1,6 +1,6 @@
 ---
 title: 'WIRDLE'
-author: '**Vedant Patel and Jonathan Wang**'
+author: '**Vedant Patel and Jonathan Wang** (website template by Ryan Tsang)'
 date: '*EEC172 SQ24*'
 
 toc-title: 'Table of Contents'
