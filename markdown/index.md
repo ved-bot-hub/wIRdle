@@ -1,14 +1,7 @@
 ---
 title: 'WIRDLE'
-author: '**Vedant Patel and Jonathan Wang** (website template by Ryan Tsang)'
+author: '**Vedant Patel and Jonathan Wang**'
 date: '*EEC172 SQ24*'
-
-subtitle: '<blockquote><b>EEC172 Final Project Webpage Example</b><br/>
-Note to current students: this is an <i>example</i> webpage and
-may not fulfill all stated requirements of the current quarter''s 
-assignment.<br/>The website source is hosted 
-<a href="https://github.com/ved-bot-hub/wIRdle">on github</a>.
-</blockquote>'
 
 toc-title: 'Table of Contents'
 abstract-title: '<h2>Description</h2>'
